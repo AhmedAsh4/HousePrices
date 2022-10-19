@@ -1,8 +1,8 @@
 import pandas as pd
 import streamlit as st
 from st_aggrid import AgGrid
-import streamlit.components.v1 as components
-import base64
+# import streamlit.components.v1 as components
+# import base64
 
 # Drop unwanted data
 df = pd.read_csv("Egypt_Houses_Price.csv")
@@ -81,7 +81,7 @@ with st.sidebar:
 # Display Table
 try:
     tables = SelectedRange.sample(SampleSize, ignore_index=True)
-    AgGrid(tables)
+    st.table(tables)
 except:
     st.exception(ValueError("Not enough examples\nTry Selecting a higher price range"))
 
