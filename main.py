@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
-from st_aggrid import AgGrid
-# import streamlit.components.v1 as components
+# from st_aggrid import AgGrid
+import streamlit.components.v1 as components
 # import base64
 
 # Drop unwanted data
