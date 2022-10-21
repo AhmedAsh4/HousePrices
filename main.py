@@ -91,7 +91,7 @@ anim = load_lottieurl('https://assets2.lottiefiles.com/private_files/lf30_p5tali
 text, animation = st.columns((3, 3))
 
 with animation:
-    stlot(anim, key="anim", width=500, height=200)
+    stlot(anim, key="anim", width=500, height=200,loop=False)
 
 with text:
     # Formatting Text
