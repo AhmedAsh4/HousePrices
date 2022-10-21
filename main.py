@@ -89,7 +89,7 @@ def load_lottieurl(url: str):
 # house animation: https://assets2.lottiefiles.com/private_files/lf30_p5tali1o.json
 anim = load_lottieurl('https://assets2.lottiefiles.com/private_files/lf30_p5tali1o.json')
 
-text, animation = st.columns((3, 3))
+text, animation = st.columns((4, 3))
 
 with animation:
     stlot(anim, key="anim", width=400, height=200,loop=False)
