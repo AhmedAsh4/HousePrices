@@ -72,6 +72,7 @@ SelectedRange = SelectedCity[SelectedCity['Price'] <= PriceRange]
 HouseAveragePrice = round(SelectedCity["Price"].mean())
 STD = round(SelectedCity["Price"].std())
 MedianPrice = round(SelectedCity["Price"].median())
+MeterPrice = round(sum(SelectedCity.Price) / sum(SelectedCity.Area))
 
 
 # load Lottie URL
@@ -98,6 +99,7 @@ with text:
     st.markdown("")
     PriceRangeFormat = st.markdown("Selected Price: " + "{:,} EGP".format(PriceRange) + " and below")
     HouseAveragePrice = st.markdown("Average house price in {}: ".format(City) + "{:,} EGP".format(HouseAveragePrice))
+    MeterPriceFormat = st.markdown("Average price per meter squared in {}: ".format(City) + "{:,} EGP".format(MeterPrice))
     MedianPrice = st.markdown("Median house price: " + "{:,} EGP".format(MedianPrice))
     STD = st.markdown("Standard Deviation: " + "{:,} EGP".format(STD))
 
