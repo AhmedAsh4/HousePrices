@@ -4,8 +4,8 @@ import streamlit.components.v1 as components
 import requests
 from streamlit_lottie import st_lottie as stlot
 import matplotlib.pyplot as plt
-
-# import base64
+from st_aggrid import AgGrid
+import base64
 
 # Drop unwanted data
 df = pd.read_csv("Egypt_Houses_Price.csv")
@@ -104,7 +104,7 @@ with text:
 # Display Table
 try:
     tables = SelectedRange.sample(SampleSize, ignore_index=True)
-    st.table(tables)
+    AgGrid(tables)
 except:
     st.exception(ValueError("Not enough examples\nTry Selecting a higher price range"))
 
