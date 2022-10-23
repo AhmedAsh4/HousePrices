@@ -117,7 +117,7 @@ area = SelectedCity["Area"]
 xaxislim=st.sidebar.slider("Limit for X axis (in Millions)", 1.0, float(max(SelectedCity["Price"]) / 1_000_000),step=1.0)
 
 fig, ax = plt.subplots()
-ax.histo(price/1_000_000, area)
+ax.scatter(price/1_000_000, area)
 plt.title("Area vs Prices in {}".format(City))
 plt.xlabel("Price", fontsize=14)
 plt.ylabel("Area", fontsize=14)
