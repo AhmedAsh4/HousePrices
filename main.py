@@ -27,7 +27,7 @@ df.drop(df[df['Area'] == 0].index, inplace=True)
 # Page config
 st.set_page_config(layout='wide', page_title="House prices in Egypt", page_icon='🏘️', )
 st.title("🏘️Egyptian House Prices sorted by location")
-st.subheader("An AI342 assignment by Ahmed Ashraf")
+st.subheader("An Exercise in Data Science by Ahmed Ashraf")
 st.markdown("""---""")
 
 # Background image (too distracting)
